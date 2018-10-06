@@ -68,17 +68,17 @@ Expected output:
 
 
 ## Testing
+
 Please find below some of the test cases:
 * `curl -d "longitude=-102.8138968&latitude=36.1487262" http://localhost:8080/`
 
-["Texas"]
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `["Texas"]`
 * `curl -d "longitude=-104.5691185&lati" http://localhost:8080/`
 
-Input is not correct. Please curl it again!
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Input is not correct. Please curl it again!`
 * `curl -d "longitude=-75.7907503&latitude=49.0945688" http://localhost:8080/` 
 
-Given coordinates are outside of United States. Try again!
-
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `Given coordinates are outside of United States. Try again!`
 
 ## Docker image
 
