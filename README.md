@@ -69,10 +69,7 @@ Expected output:
 
 ## Testing
 Please find below some of the test cases:
-* `curl -d "longitude=-111.216141&latitude=34.666038" http://localhost:8080/`
-
-["Arizona"]
-* `curl -d "longitude=-99.967462&latitude=32.839522" http://localhost:8080/`
+* `curl -d "longitude=-102.8138968&latitude=36.1487262" http://localhost:8080/`
 
 ["Texas"]
 * `curl -d "longitude=-104.5691185&lati" http://localhost:8080/`
@@ -88,6 +85,3 @@ Given coordinates are outside of United States. Try again!
 [Docker Hub Link](https://hub.docker.com/r/parushgarg/vistar-media/)
 
 `docker pull parushgarg/vistar-media`. This will greatly help if the application needs to be scaled up or down via `Kubernetes` on any cloud platform.
-
-
-
