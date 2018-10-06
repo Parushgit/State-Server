@@ -81,6 +81,7 @@ Given coordinates are outside of United States. Try again!
 
 ## Docker image
 
+![Docker Hub Link](https://hub.docker.com/r/parushgarg/vistarmedia/)
 `docker pull parushgarg/vistarmedia`. This will greatly help if the application needs to be scaled up or down via `Kubernetes` on any cloud architecture.
 
 
