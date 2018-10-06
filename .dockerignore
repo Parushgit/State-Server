@@ -1,3 +1,6 @@
 # comment
 *.md
 *.png
+venv
+server.pyc
+screenshots
