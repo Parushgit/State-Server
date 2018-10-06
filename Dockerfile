@@ -1,7 +1,4 @@
-FROM ubuntu:latest
-
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+FROM python:3.6.5-slim
 
 RUN mkdir /src
 

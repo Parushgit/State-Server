@@ -12,6 +12,7 @@ correct.
 
 $ ./state-server &
 [1] 21507
+
 $ curl  -d "longitude=-77.036133&latitude=40.513799" http://localhost:8080/
 ["Pennsylvania"]
 
@@ -19,14 +20,14 @@ $ curl  -d "longitude=-77.036133&latitude=40.513799" http://localhost:8080/
 
 The above requirement has been built using `Flask` which is a microframework
 for `Python`. The application has been containerised using `Docker` for the ease of use.
-Container runs on `localhost` with port number `5000`.
+Container runs on `localhost` with port number `8080`.
 
 The available `make` targets are as follows:
 
 ### `make clean`
 
 Cleans the project by killing dangling images, containers etc in the system. This is done to ensure that no local application
-is running on the port `5000`.
+is running on the port `8080`.
 
 ### `make build`
 
@@ -34,8 +35,8 @@ Builds the Docker image named as `state-server`.
 
 ### `make run`
 
-Spins up the container built from image `state-server` which runs on `localhots` and 
-port `5000`.
+Spins up the container built from image `state-server` which runs on `localhost` and 
+port `8080`.
 
 ## How to run the application
 
@@ -52,12 +53,12 @@ Go to `terminal` and run following commands.
 
 
 ### 2 - Via manually
-(Assumes that [flask](http://flask.pocoo.org/docs/1.0/installation/) and [python](https://www.python.org/downloads/) is installed in your machine)
+(Assumes that [flask](http://flask.pocoo.org/docs/1.0/installation/) and [python](https://www.python.org/downloads/) are installed in your machine)
 
 Go to `terminal` and run following commands.
 * `git clone git@github.com:Parushgit/State-Server.git`
 * `cd` to directory `State-Server`
-* Run `FLASK_APP=server.py flask run`
+* Run `python server.py`
 * Open a new `terminal` window and run `curl -d "longitude=-77.036133&latitude=40.513799" http://localhost:8080/`
 
 Expected output:
@@ -66,4 +67,21 @@ Expected output:
 ![Output2](https://github.com/Parushgit/State-Server/blob/master/screenshots/Output.png)
 
 
+## Testing
+Please find below some of the test cases:
+* curl -d "longitude=-111.216141&latitude=34.666038" http://localhost:8080/
+["Arizona"]
+* curl -d "longitude=-99.967462&latitude=32.839522" http://localhost:8080
+["Texas"]
+* curl -d "longitude=-104.5691185&lati" http://localhost:8080/
+Input is not correct. Please curl it again!
+* curl -d "longitude=-75.7907503&latitude=49.0945688" http://localhost:8080/
+Given coordinates are outside of United States. Try again!
+
+
 ## Docker image
+
+`docker pull parushgarg/vistarmedia`. This will greatly help if the application needs to be scaled up or down via `Kubernetes` on any cloud architecture.
+
+
+
