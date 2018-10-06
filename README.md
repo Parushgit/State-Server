@@ -69,13 +69,17 @@ Expected output:
 
 ## Testing
 Please find below some of the test cases:
-* curl -d "longitude=-111.216141&latitude=34.666038" http://localhost:8080/
+* `curl -d "longitude=-111.216141&latitude=34.666038" http://localhost:8080/`
+
 ["Arizona"]
-* curl -d "longitude=-99.967462&latitude=32.839522" http://localhost:8080
+* `curl -d "longitude=-99.967462&latitude=32.839522" http://localhost:8080/`
+
 ["Texas"]
-* curl -d "longitude=-104.5691185&lati" http://localhost:8080/
+* `curl -d "longitude=-104.5691185&lati" http://localhost:8080/`
+
 Input is not correct. Please curl it again!
-* curl -d "longitude=-75.7907503&latitude=49.0945688" http://localhost:8080/
+* `curl -d "longitude=-75.7907503&latitude=49.0945688" http://localhost:8080/` 
+
 Given coordinates are outside of United States. Try again!
 
 
