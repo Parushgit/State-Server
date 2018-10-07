@@ -40,7 +40,7 @@ port `8080`.
 
 ## How to run the application
 
-### 1 - Via `Docker`
+### 1 - Via Docker
 (Assumes that [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) are installed in your machine)
 
 Go to `terminal` and run following commands.
