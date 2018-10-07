@@ -9,7 +9,9 @@ states = []
 
 @app.before_first_request
 def _load_json():
-    print('Inside')
+    """
+        Private method: Loads the json from the file present in the root directory. Only once!
+    """
     file_name = 'states.json'
     with open(file_name, 'r') as f:
         for line in f:
@@ -18,6 +20,9 @@ def _load_json():
 
 @app.route("/", methods=['POST'])
 def start():
+    """
+        Returns the required output
+    """
     return get_state()
 
 

@@ -85,3 +85,6 @@ Please find below some of the test cases:
 [Docker Hub Link](https://hub.docker.com/r/parushgarg/vistar-media/)
 
 `docker pull parushgarg/vistar-media`. This will greatly help if the application needs to be scaled up or down via `Kubernetes` on any cloud platform.
+
+## References
+[Google Maps Point In Polygon](https://github.com/mattwilliamson/Google-Maps-Point-in-Polygon/blob/master/maps.google.polygon.containsLatLng.js)
